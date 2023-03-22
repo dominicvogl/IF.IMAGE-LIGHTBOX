@@ -1,15 +1,18 @@
+$block-radius: var(--wp--preset--font-size--small) !default;
+
 .wp-block-if-digital-image-lightboxes {
 	display: grid;
-	gap: var(--wp--preset--spacing--40);
+	gap: var(--wp--preset--spacing--60);
 	grid-template-columns: repeat( auto-fit, minmax( 150px, 1fr ) );
 
 	.wp-block-if-digital-image-lightbox {
 		img {
 			display: block;
+			border-radius: $block-radius;
 		}
 	}
 
 	&.is-style-rounded {
-		
+		border-radius: $block-radius;
 	}
 }
