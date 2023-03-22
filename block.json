@@ -1,0 +1,31 @@
+{
+	"apiVersion": 2,
+	"name": "dominicvogl/team-members",
+	"title": "Team Members",
+	"category": "media",
+	"icon": "groups",
+	"description": "A team Members Grid",
+	"keywords": [
+		"team",
+		"members",
+		"grid",
+		"block"
+	],
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		]
+	},
+	"textdomain": "team-members",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 3
+		}
+	}
+}
