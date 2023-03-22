@@ -3,8 +3,8 @@ import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
 
 export default function save({ attributes }) {
 	return (
-		<p {...useBlockProps.save()}>
+		<div {...useBlockProps.save()}>
 			<InnerBlocks.Content />
-		</p>
+		</div>
 	);
 }
