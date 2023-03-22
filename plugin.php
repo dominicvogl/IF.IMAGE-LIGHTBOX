@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Team Members
- * Description:       A Team Members grid
+ * Plugin Name:       IF Image lightbox
+ * Description:       A image gallery with lightbox
  * Requires at least: 5.7
  * Requires PHP:      7.0
  * Version:           0.1.0
@@ -10,17 +10,21 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       boilerplate
  *
- * @package           team-members
+ * @package           if-image-lightbox
  */
 
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
- */
-function dominicvogl_team_members_block_init() {
-	register_block_type_from_metadata( __DIR__ );
+defined('ABSPATH') || exit;
+
+class IF_IMAGE_LIGHTBOX {
+
+	public function __construct() {
+		add_action('init', array($this, 'block_init'));
+	}
+
+	public function block_init() {
+		register_block_type_from_metadata(__DIR__);
+	}
 }
-add_action( 'init', 'dominicvogl_team_members_block_init' );
+
+// Self-initialization
+new IF_IMAGE_LIGHTBOX();

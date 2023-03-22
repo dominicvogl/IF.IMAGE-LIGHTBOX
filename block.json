@@ -1,15 +1,16 @@
 {
 	"apiVersion": 2,
-	"name": "dominicvogl/team-members",
-	"title": "Team Members",
+	"name": "if-digital/image-lightbox",
+	"title": "IF Image Lightbox",
 	"category": "media",
 	"icon": "groups",
-	"description": "A team Members Grid",
+	"description": "A image gallery with lightbox",
 	"keywords": [
-		"team",
-		"members",
-		"grid",
-		"block"
+		"gallery",
+		"images",
+		"lightbox",
+		"block",
+		"gutenberg"
 	],
 	"supports": {
 		"html": false,
@@ -21,11 +22,5 @@
 	"textdomain": "team-members",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css",
-	"attributes": {
-		"columns": {
-			"type": "number",
-			"default": 3
-		}
-	}
+	"style": "file:./build/style-index.css"
 }
