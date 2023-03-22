@@ -4,11 +4,11 @@ import { registerBlockType } from "@wordpress/blocks";
 import Edit from "./edit";
 import Save from "./save";
 
-registerBlockType("dominicvogl/team-member", {
-	title: __("Team Member", "team-members"),
-	description: __("A team member block", "team-members"),
-	icon: "admin-users",
-	parent: ["dominicvogl/team-members"],
+registerBlockType("if-digital/image-lightbox", {
+	title: __("Image Lightbox", "if-image-lightboxes"),
+	description: __("A Image Gallery Block", "if-image-lightboxes"),
+	icon: "format-image",
+	parent: ["if-digital/image-lightboxes"],
 	attributes: {
 		name: {
 			type: "string",

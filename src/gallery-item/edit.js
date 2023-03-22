@@ -142,17 +142,17 @@ const Edit = ({ attributes, setAttributes, noticeOperations, noticeUI }) => {
 		}
 	}, [url]);
 
-	useEffect(() => {
-		titleRef.current.focus();
-	}, [url]);
+	// useEffect(() => {
+	// 	titleRef.current.focus();
+	// }, [url]);
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__("Image Settings", "team-members")}>
+				<PanelBody title={__("Image Settings", "gallery-items")}>
 					{id && (
 						<SelectControl
-							label={__("Image size", "team-members")}
+							label={__("Image size", "gallery-items")}
 							options={getImageSizeOptions()}
 							value={url}
 							onChange={onChangeImageSize}
@@ -160,12 +160,12 @@ const Edit = ({ attributes, setAttributes, noticeOperations, noticeUI }) => {
 					)}
 					{url && !isBlobURL(url) && (
 						<TextareaControl
-							label={__("Alt Text", "team-members")}
+							label={__("Alt Text", "gallery-items")}
 							value={alt}
 							onChange={onChangeAlt}
 							help={__(
 								"Alternative text describes your image to people who can't see it. Add alternative text so search engines can better understand the content of your image.",
-								"team-members"
+								"gallery-items"
 							)}
 						/>
 					)}
@@ -174,7 +174,7 @@ const Edit = ({ attributes, setAttributes, noticeOperations, noticeUI }) => {
 			{url && (
 				<BlockControls group="inline">
 					<MediaReplaceFlow
-						name={__("Replace member image", "team-members")}
+						name={__("Replace image", "gallery-items")}
 						icon="admin-users"
 						onSelect={onSelectImage}
 						onSelectURL={onSelectUrl}
@@ -194,7 +194,7 @@ const Edit = ({ attributes, setAttributes, noticeOperations, noticeUI }) => {
 			<article {...useBlockProps()}>
 				{url && (
 					<div
-						className={`wp-block-team-member-image-wrapper-img${
+						className={`wp-block-gallery-item-image-wrapper-img${
 							isBlobURL(url) ? "is-loading" : ""
 						}`}
 					>
@@ -211,21 +211,6 @@ const Edit = ({ attributes, setAttributes, noticeOperations, noticeUI }) => {
 					allowedTypes={["image"]}
 					disableMediaButtons={url}
 					notices={noticeUI}
-				/>
-				<RichText
-					ref={titleRef}
-					placeholder={__("Member Name", "team-member")}
-					onChange={onChangeName}
-					value={name}
-					tagName="h4"
-					allowedFormats={[]} // disable formatting
-				/>
-				<RichText
-					placeholder={__("Member Bio", "team-member")}
-					value={bio}
-					onChange={onChangeBio}
-					tagName="p"
-					allowedFormats={[]} // disable formatting
 				/>
 			</article>
 		</>

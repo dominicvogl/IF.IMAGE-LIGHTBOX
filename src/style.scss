@@ -1,0 +1,15 @@
+.wp-block-if-digital-image-lightboxes {
+	display: grid;
+	gap: var(--wp--preset--spacing--40);
+	grid-template-columns: repeat( auto-fit, minmax( 150px, 1fr ) );
+
+	.wp-block-if-digital-image-lightbox {
+		img {
+			display: block;
+		}
+	}
+
+	&.is-style-rounded {
+		
+	}
+}

@@ -1,7 +1,7 @@
 import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 const Save = ({ attributes }) => {
-	const { name, bio, url, alt, id } = attributes;
+	const { url, alt, id } = attributes;
 
 	return (
 		<div {...useBlockProps.save()}>
@@ -12,8 +12,6 @@ const Save = ({ attributes }) => {
 					className={id ? `wp-image-${id}` : null}
 				/>
 			)}
-			<RichText.Content tagName="h4" value={name} />
-			<RichText.Content tagName="p" value={bio} />
 		</div>
 	);
 };

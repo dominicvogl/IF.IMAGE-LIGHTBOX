@@ -1,10 +1,10 @@
 {
 	"apiVersion": 2,
-	"name": "if-digital/image-lightbox",
+	"name": "if-digital/image-lightboxes",
 	"title": "IF Image Lightbox",
 	"category": "media",
 	"icon": "groups",
-	"description": "A image gallery with lightbox",
+	"description": "A image gallery with lightboxes",
 	"keywords": [
 		"gallery",
 		"images",
@@ -17,9 +17,49 @@
 		"align": [
 			"wide",
 			"full"
-		]
+		],
+		"color": {
+			"background": true,
+			"text": false
+		},
+		"spacing": {
+			"padding": true
+		}
 	},
-	"textdomain": "team-members",
+	"attributes": {
+		"backgroundColor": {
+			"type": "string",
+			"default": "brand_color_text_primary"
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"text": "#000"
+				},
+				"spacing": {
+					"padding": {
+						"top": "2rem",
+						"right": "2rem",
+						"bottom": "2rem",
+						"left": "2rem"
+					}
+				}
+			}
+		}
+	},
+	"styles": [
+		{
+			"name": "rounded",
+			"label": "Rounded",
+			"isDefault": true
+		},
+		{
+			"name": "squared",
+			"label": "Squared"
+		}
+	],
+	"textdomain": "if-image-lightboxes",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css"
